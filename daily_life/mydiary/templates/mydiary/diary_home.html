@@ -1,0 +1,23 @@
+{% extends 'mydiary/base.html' %}
+
+
+  {% block header %}
+    <div class="bg-success p-2">
+            <div class="mx-auto" style="width: 500px;">
+                    <h1 class="" style="color:#033b96;"> Hello, {{ user.first_name }} {{ user.last_name }} </h1>
+            </div>
+    </div>
+{% endblock %}
+
+ {% block content%}
+    <div class="jumbotron">
+        <h1 class="display-6">Hay! {{ user.first_name }} {{ user.last_name }} <a href="{% url 'diary-add' %}" class="btn btn-primary ml-5 mb-4">Create New Memory !!!</a> </h1>
+        <p>This is your diary, you can add more data to your diary space, or you can delete , update your existing data.</p>
+        <p><strong>Everyone can have their own personal diary or journal on the Internet - it's free at mysite!
+Our focus is on security and privacy, and all diaries are private by default.
+Go ahead and register your own public or private diary today.</strong></p>
+        <p><strong>
+            Writing a diary is a good way to make sure your memories and experiences stay alive. It lets you keep track and reflect on your past and learn from your mistakes.
+        </strong></p>
+      </div>
+    {% endblock content %}

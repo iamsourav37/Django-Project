@@ -1,0 +1,34 @@
+{% extends 'main_home/base.html' %}
+{% block title %} Login {% endblock title %}
+{% block nav-heading %} Easy Life {% endblock %}
+
+{% block content %}
+   <div class="container mt-5 col-6 ">
+	   	<div class="container">
+			{% if error %}
+				 <div class="alert alert-danger alert-dismissible fade show" role="alert">
+				        <strong>Something Wrong : </strong> {{ error }}
+				        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				          <span aria-hidden="true">&times;</span>
+				        </button>
+      				</div>
+			{% endif %}
+		</div>
+
+   	<form method="POST" action="{% url 'login-page' %}"> {% csrf_token %}
+	  <div class="form-group">
+	    <label for="uname">Username</label>
+	    <input name="userN" type="text" class="form-control" id="uname" placeholder="Your Username...">
+	  </div>
+	  <div class="form-group">
+	    <label for="password">Password</label>
+	    <input name="userP" type="password" class="form-control" id="password" placeholder="Your Password...">
+	  </div>
+	 
+	  <button type="submit" class="btn btn-warning">Login</button>
+   </form>
+   	
+   </div>
+
+   
+{% endblock %}

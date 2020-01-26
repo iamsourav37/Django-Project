@@ -1,0 +1,21 @@
+{% extends 'todo/base.html' %}
+{% block title %} Todo  {% endblock title %}
+{% block nav-heading %} {{ user.first_name }}'s Todo {% endblock %}
+
+     {% block style %}
+
+     {% endblock %}
+
+    {% block content%}
+    <div class="jumbotron">
+        <div class="container mb-5">
+            <a class="btn btn-primary ml-5 mr-2" href="{% url 'todo-add' %}">Add a new todo</a>
+            <a class="btn btn-primary" href="{% url 'todo-view' %}">View your all todo list</a>
+        </div>
+        <h4 class="text-info">About Todo feature!</h4>
+        <p>This feature allow you to add or store your PRIORITIES or work <br />You can save new todo or delete existing todo as much as you can.</p>
+
+        <a class="btn btn-primary btn-md mt-5" href="{% url 'diary-home'  %}" role="button">Go to Your Diary</a>
+      </div>
+    {% endblock content %}
+

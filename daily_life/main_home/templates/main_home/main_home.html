@@ -1,0 +1,16 @@
+{% extends 'main_home/base.html' %}
+{% block title %} Home {% endblock title %}
+{% block nav-heading %} Easy Life {% endblock %}
+
+{% block content %}
+    <div class="jumbotron">
+        <h1 class="display-4">Hello, world!</h1>
+        <p class="lead">Hello, This is Sourav Ganguly. Welcome to my site.</p>
+        <hr class="my-4">
+        <p>This is a very good website where you use our services like 'ToDo' 'MyDiary'... </p>
+        <a class="btn btn-info btn-md" href="{% url 'signup-page' %}" role="button">Signup</a> now for create your todo and memories.
+        <br><br> <a class="btn btn-info btn-md" href="{% url 'login-page' %}" role="button">Login</a> now for view or create your todo and memories.
+      </div>
+
+   
+{% endblock %}
